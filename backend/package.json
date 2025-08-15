@@ -1,0 +1,57 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Video RAG Backend System",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "debug": "node test-milvus.js"
+  },
+  "keywords": [
+    "video",
+    "rag",
+    "ai",
+    "machine-learning",
+    "vector-database"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google-cloud/speech": "^7.2.0",
+    "@google/generative-ai": "^0.24.1",
+    "@zilliz/milvus2-sdk-node": "^2.6.0",
+    "assemblyai": "^4.15.0",
+    "axios": "^1.11.0",
+    "bcrypt": "^6.0.0",
+    "child_process": "^1.0.2",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "fluent-ffmpeg": "^2.1.3",
+    "fs-extra": "^11.3.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.1",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^5.12.2",
+    "path": "^0.12.7",
+    "speech-to-text": "^3.0.2",
+    "uuid": "^11.1.0",
+    "whisper-node": "^1.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
