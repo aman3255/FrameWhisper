@@ -9,6 +9,8 @@ import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import { authApi, type SignUpData, type SignInData } from '@/lib/api';
 import { useToast } from '@/hooks/use-toast';
 
+
+
 export function AuthForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [signUpData, setSignUpData] = useState<SignUpData>({
