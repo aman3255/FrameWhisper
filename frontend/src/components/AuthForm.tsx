@@ -35,7 +35,7 @@ export function AuthForm() {
       localStorage.setItem('token', response.token);
       toast({
         title: "Account created successfully!",
-        description: "Welcome to VideoQuery",
+        description: "Welcome to FrameWhisper",
       });
       navigate('/upload');
     } catch (error: any) {
@@ -77,7 +77,7 @@ export function AuthForm() {
       <Card className="w-full max-w-md shadow-elegant animate-fade-in">
         <CardHeader className="text-center space-y-4">
           <CardTitle className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            VideoQuery
+          FrameWhisper
           </CardTitle>
           <CardDescription className="text-base">
             Upload videos and ask questions with AI

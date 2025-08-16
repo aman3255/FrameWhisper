@@ -52,7 +52,7 @@ export function LandingPage() {
     {
       name: "Sarah Chen",
       role: "Content Creator",
-      content: "VideoQuery has revolutionized how I analyze my content. The AI insights are incredibly accurate!",
+      content: "FrameWhisper has revolutionized how I analyze my content. The AI insights are incredibly accurate!",
       rating: 5
     },
     {
@@ -78,7 +78,7 @@ export function LandingPage() {
             <div className="flex items-center">
               <Play className="h-8 w-8 text-primary mr-2" />
               <span className="font-display font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
-                VideoQuery
+              FrameWhisper
               </span>
             </div>
             
@@ -214,7 +214,7 @@ export function LandingPage() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  VideoQuery combines cutting-edge AI technology with an intuitive interface to make video analysis accessible to everyone. Whether you're a content creator, educator, or business professional, our platform helps you extract meaningful insights from your video content.
+                FrameWhisper combines cutting-edge AI technology with an intuitive interface to make video analysis accessible to everyone. Whether you're a content creator, educator, or business professional, our platform helps you extract meaningful insights from your video content.
                 </p>
                 <p>
                   Our advanced machine learning models can understand context, identify key moments, and provide intelligent responses to your questions about any video content.
@@ -316,7 +316,7 @@ export function LandingPage() {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Play className="h-8 w-8 text-primary mr-2" />
-                <span className="font-display font-bold text-xl">VideoQuery</span>
+                <span className="font-display font-bold text-xl">FrameWhisper</span>
               </div>
               <p className="text-muted-foreground">
                 AI-powered video analysis that helps you understand your content better.
@@ -369,7 +369,7 @@ export function LandingPage() {
           </div>
           
           <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 VideoQuery. All rights reserved.</p>
+            <p>&copy; 2024 FrameWhisper. All rights reserved.</p>
           </div>
         </div>
       </footer>
