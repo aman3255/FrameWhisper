@@ -1,43 +1,33 @@
-# 🎥 FrameWhisper - Advanced Video Content RAG with Visual Understanding
+#  FrameWhisper - Advanced Video Content RAG with Visual Understanding
 
 A cutting-edge multimodal RAG (Retrieval-Augmented Generation) system that processes video content, extracts key frames, transcribes audio, and enables intelligent video querying through AI-powered chat with both textual and visual understanding capabilities.
 
-## 🌟 Project Overview
+##  Project Overview
 
 FrameWhisper is a sophisticated video analysis platform that combines multiple AI technologies to create a comprehensive video understanding system. It processes videos through a multi-stage pipeline: frame extraction, audio transcription, text chunking, and vector embedding generation for both textual and visual content.
 
-## 🚀 Key Features
+##  Key Features
 
 ### **Core Video Processing Pipeline**
-- **🎬 Video Frame Extraction**: Extract key frames at configurable intervals using FFmpeg
-- **🎵 Audio Transcription**: High-quality speech-to-text conversion using AssemblyAI
-- **📝 Smart Text Chunking**: Multiple strategies (standard, sentence-based, timestamp-aware)
-- **🧠 Vector Embeddings**: Dual-modal embeddings (text via Google Gemini, visual via CLIP)
-- **🗄️ Vector Database**: Scalable storage and search using Zilliz/Milvus
-- **💬 AI Chat Interface**: Natural language video querying with context-aware responses
+- **Video Frame Extraction**: Extract key frames at configurable intervals using FFmpeg
+- **Audio Transcription**: High-quality speech-to-text conversion using AssemblyAI
+- **Smart Text Chunking**: Multiple strategies (standard, sentence-based, timestamp-aware)
+- **Vector Embeddings**: Dual-modal embeddings (text via Google Gemini, visual via CLIP)
+- **Vector Database**: Scalable storage and search using Zilliz/Milvus
+- **AI Chat Interface**: Natural language video querying with context-aware responses
 
 ### **Advanced Capabilities**
-- **🔍 Multimodal Search**: Combine visual and textual understanding for comprehensive results
-- **⏱️ Real-time Processing**: Live progress tracking during video analysis
-- **🎯 Intelligent Chunking**: Optimized text segmentation preserving semantic context
-- **🔧 Debug & Monitoring**: Comprehensive debugging tools and health checks
-- **🔒 Security**: JWT authentication, rate limiting, and input validation
-- **📊 Progress Tracking**: Real-time upload and processing status updates
+- **Multimodal Search**: Combine visual and textual understanding for comprehensive results
+- **Real-time Processing**: Live progress tracking during video analysis
+- **Intelligent Chunking**: Optimized text segmentation preserving semantic context
+- **Debug & Monitoring**: Comprehensive debugging tools and health checks
+- **Security**: JWT authentication, rate limiting, and input validation
+- **Progress Tracking**: Real-time upload and processing status updates
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Frontend      │    │    Backend      │    │   AI Services   │
-│   (React/TS)    │◄──►│   (Node.js)     │◄──►│   (Gemini/CLIP) │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   User Auth     │    │   Video Upload  │    │  Vector Search  │
-│   & Interface   │    │   & Processing  │    │   (Milvus)      │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+![Video RAG Pipeline Architecture](./backend/Video-RAG-Pipeline.png)
 ```
 
 ### **Processing Pipeline**
@@ -49,7 +39,7 @@ FrameWhisper is a sophisticated video analysis platform that combines multiple A
 6. **Vector Storage** → Milvus database indexing
 7. **Query Interface** → Semantic search and AI response generation
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### **Frontend**
 - **React 18** with TypeScript for type safety
@@ -82,7 +72,7 @@ FrameWhisper is a sophisticated video analysis platform that combines multiple A
 - **Nodemon** for development server
 - **TypeScript** for type safety
 
-## 📦 Installation & Setup
+##  Installation & Setup
 
 ### **Prerequisites**
 - Node.js 18+ 
@@ -102,7 +92,7 @@ cd framewhisper
 ```bash
 cd backend
 npm install
-cp .env.example .env
+cp  .env
 # Configure your environment variables
 npm run dev
 ```
@@ -149,7 +139,7 @@ HUGGING_FACE_TOKEN=your_hf_token
 VITE_API_BASE_URL=http://localhost:4000/api/v1
 ```
 
-## 🚀 Quick Start Guide
+##  Quick Start Guide
 
 ### **1. Start Backend Server**
 ```bash
@@ -170,7 +160,7 @@ npm run dev
 - **Backend API**: http://localhost:4000
 - **Health Check**: http://localhost:4000/health
 
-## 📡 API Endpoints
+##  API Endpoints
 
 ### **Authentication**
 - `POST /api/v1/auth/signup` - User registration
@@ -186,7 +176,7 @@ npm run dev
 - `GET /api/v1/video/query/test` - Test collection status
 - `GET /api/v1/video/query/health` - Health check for query services
 
-## 🔍 Usage Examples
+##  Usage Examples
 
 ### **Video Upload & Processing**
 1. Navigate to `/upload` page
@@ -213,7 +203,7 @@ npm run dev
 3. Force reindex if needed
 4. Monitor backend logs for detailed processing info
 
-## 🧪 Testing & Development
+##  Testing & Development
 
 ### **Backend Testing**
 ```bash
@@ -237,7 +227,7 @@ curl http://localhost:4000/api/v1/video/debug/VIDEO_ID \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 
-## 🚨 Troubleshooting Guide
+## Troubleshooting Guide
 
 ### **Common Issues & Solutions**
 
@@ -257,7 +247,7 @@ curl http://localhost:4000/api/v1/video/debug/VIDEO_ID \
 4. Check video indexing status in database
 5. Use health check endpoints to verify service status
 
-## 📊 Performance & Optimization
+##  Performance & Optimization
 
 ### **Processing Optimizations**
 - **Batch Processing**: Efficient embedding generation and storage
@@ -272,7 +262,7 @@ curl http://localhost:4000/api/v1/video/debug/VIDEO_ID \
 - **Database Sharding**: MongoDB cluster support
 - **Queue System**: Background job processing architecture
 
-## 🔒 Security Features
+##  Security Features
 
 ### **Authentication & Authorization**
 - **JWT Authentication**: Secure token-based authentication
@@ -293,7 +283,7 @@ curl http://localhost:4000/api/v1/video/debug/VIDEO_ID \
 - Input validation and sanitization
 - Regular security audits and updates
 
-## 🤝 Contributing
+##  Contributing
 
 ### **Development Setup**
 1. Fork the repository
@@ -315,11 +305,11 @@ curl http://localhost:4000/api/v1/video/debug/VIDEO_ID \
 - End-to-end tests for critical user flows
 - Performance testing for video processing pipeline
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **AssemblyAI** for high-quality audio transcription services
 - **Google Gemini** for advanced AI capabilities and embeddings
@@ -327,16 +317,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Zilliz** for scalable vector database infrastructure
 - **Open Source Community** for tools, libraries, and inspiration
 
-## 📞 Support & Community
+##  Support & Community
 
 - **Issues**: [GitHub Issues](https://github.com/yourusername/framewhisper/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/framewhisper/discussions)
 - **Documentation**: [Project Wiki](https://github.com/yourusername/framewhisper/wiki)
 - **Email**: support@framewhisper.com
 
-## 🔮 Development Roadmap
+##  Development Roadmap
 
-### **Phase 1** ✅ (Completed)
+### **Phase 1**  (Completed)
 - [x] Core video processing pipeline
 - [x] Audio transcription integration
 - [x] Text chunking strategies
@@ -344,14 +334,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [x] Basic chat interface
 - [x] User authentication system
 
-### **Phase 2** 🚧 (In Progress)
+### **Phase 2**  (In Progress)
 - [ ] Advanced visual understanding with CLIP
 - [ ] Multi-language transcription support
 - [ ] Video summarization features
 - [ ] Content moderation and filtering
 - [ ] Enhanced UI/UX improvements
 
-### **Phase 3** 📋 (Planned)
+### **Phase 3**  (Planned)
 - [ ] Real-time collaboration features
 - [ ] Advanced analytics and insights
 - [ ] Mobile application development
@@ -359,14 +349,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] API rate limiting and quotas
 - [ ] Advanced caching strategies
 
-### **Phase 4** 🎯 (Future)
+### **Phase 4**  (Future)
 - [ ] Real-time video streaming analysis
 - [ ] Advanced multimodal search capabilities
 - [ ] Integration with external video platforms
 - [ ] Machine learning model fine-tuning
 - [ ] Advanced security features
 
-## 📈 Performance Metrics
+##  Performance Metrics
 
 ### **Processing Capabilities**
 - **Video Formats**: MP4, AVI, MOV, MKV, WebM
