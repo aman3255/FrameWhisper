@@ -11,7 +11,7 @@ const path = require('path');
 const v1Router = require('./src/routers/v1/v1.router');
 
 // Import middleware
-const { requestLogger } = require('./src/middlewares/requestlogger.middleware');
+const { RequestLoggerMiddleware } = require('./src/middlewares/requestlogger.middleware');
 
 // Import utilities
 const { validateEnvironmentVariables } = require('./src/utils/validateEnvironmentVariables.utils');
@@ -51,13 +51,25 @@ app.use(compression());
 
 // Logging middleware
 app.use(morgan('combined'));
-app.use(requestLogger);
+app.use(RequestLoggerMiddleware);
 
 // CORS configuration
+// CORS configuration
+const allowedOrigins = process.env.NODE_ENV === 'production' 
+  ? [
+      'https://framewhisper.pages.dev',
+      'https://framewhisper.onrender.com',
+      ...(process.env.FRONTEND_URL ? [process.env.FRONTEND_URL] : [])
+    ]
+  : [
+      'http://localhost:3000', 
+      'http://localhost:5173',
+      'http://127.0.0.1:3000',
+      'http://127.0.0.1:5173'
+    ];
+
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://yourdomain.com'] 
-    : ['http://localhost:3000', 'http://localhost:5173'],
+  origin: allowedOrigins,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
