@@ -26,9 +26,8 @@ FrameWhisper is a sophisticated video analysis platform that combines multiple A
 
 ## System Architecture
 
-```
+
 ![Video RAG Pipeline Architecture](./backend/Video-RAG-Pipeline.png)
-```
 
 ### **Processing Pipeline**
 1. **Video Upload** → File validation and storage
@@ -305,9 +304,6 @@ curl http://localhost:4000/api/v1/video/debug/VIDEO_ID \
 - End-to-end tests for critical user flows
 - Performance testing for video processing pipeline
 
-##  License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ##  Acknowledgments
 
@@ -373,6 +369,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ for the AI and video analysis community**
 
 *FrameWhisper - Where videos speak through AI*
